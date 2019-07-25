@@ -8,6 +8,9 @@ var mime = require("mime"); //Add-on mime module provides ability to derive a MI
 
 var cache = {}; //Cache object is where the contents of cached files are stored
 
+var chatServer = require('./lib/chat_server');
+
+
 
 //error response
 //handle the sending of 404 errors when a file is requested that doesn't exist
@@ -63,6 +66,8 @@ var server = http.createServer(function (req, res) { ///create HTTp server,using
     serverStatic(res, cache, absPath); //serve static file
 
 });
+
+chatServer.listen(server)
 
 server.listen(3000,function(){
     console.log("Server listening on port 3000.");
