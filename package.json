@@ -1,13 +1,14 @@
 {
   "name": "chat-rooms",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Multi chat room",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +20,11 @@
     "url": "https://github.com/KaynAssassin/chat-rooms2/issues"
   },
   "dependencies": {
-    "mime": "^1.2.11",
-    "socket.io": "^0.9.19"
+    "mime": "^2.4.4",
+    "socket.io": "^2.2.0",
+    "uglify-js": "^3.6.0",
+    "ws": "^7.1.1"
   },
-  "homepage": "https://github.com/KaynAssassin/chat-rooms2#readme"
+  "homepage": "https://github.com/KaynAssassin/chat-rooms2#readme",
+  "devDependencies": {}
 }
