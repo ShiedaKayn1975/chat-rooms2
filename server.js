@@ -23,8 +23,8 @@ function send404(response) {
 //sends the contents of the file
 function sendFile(response, filePath, fileContents) {
     response.writeHead(200, {
-        "Content-Type": mime.lookup(path.basename(filePath))
-    });
+        "Content-Type": mime.lookup(path.basename(filePath))}
+        );
     response.end(fileContents);
 }
 
@@ -53,7 +53,7 @@ function serverStatic(response, cache, absPath) {
 var server = http.createServer(function (req, res) { ///create HTTp server,using anonymous function to define per-request behavior 
     var filePath = false;
     if (req.url == '/') {
-        filePath = "piblic/index.html"; //Determine HTML file to be server by default
+        filePath = "public/index.html"; //Determine HTML file to be server by default
     } else {
         filePath = 'public' + req.url;
     }
@@ -65,10 +65,10 @@ var server = http.createServer(function (req, res) { ///create HTTp server,using
 });
 
 
-var chatServer = require('./lib/chat_server');
-chatServer.listen(server)
 
 server.listen(3000,function(){
     console.log("Server listening on port 3000.");
 });
 
+var chatServer = require('./lib/chat_server');
+chatServer.listen(server);

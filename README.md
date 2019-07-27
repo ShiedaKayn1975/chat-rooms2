@@ -1,1 +1,2 @@
-# chat-rooms2
+cách hoạt động:
+
